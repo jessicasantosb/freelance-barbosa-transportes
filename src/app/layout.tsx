@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description:
     "Serviços de entregas e fretes rápidos com caminhão pequeno. Ideal para mudanças e transporte de mercadorias com agilidade, cuidado e confiança. Solicite já um orçamento!",
   icons: {
-    icon: "/images/favicon.svg",
+    icon: "/images/logo.svg",
   },
 };
 
