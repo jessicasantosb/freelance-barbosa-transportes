@@ -12,11 +12,11 @@ export function MessageTrigger() {
     <section>
       <p className="text-2xl pb-2">
         Precisa de entregas ou fretes{" "}
-        <span className="text-red-700">rápidos e seguros</span>? Solicite já um
+        <span className="text-secondary">rápidos e seguros</span>? Solicite já um
         orçamento!
       </p>
       <Button
-        className="h-14 uppercase text-xl bg-red-700"
+        className="h-14 uppercase text-xl bg-secondary"
         onClick={() => setCheckoutOpen(true)}
       >
         Fale Comigo
