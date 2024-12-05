@@ -48,7 +48,7 @@ export function StepInfo({ setStep }: SetStepProps) {
               <FormItem>
                 <FormLabel>Bairro/Cidade de origem</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input autoFocus {...field} />
                 </FormControl>
                 <FormMessage />
               </FormItem>
