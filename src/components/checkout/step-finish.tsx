@@ -18,8 +18,7 @@ export function StepFinish() {
         Perfeito <strong>{name}</strong>!
       </p>
       <p>
-        Tudo pronto! Envie seus dados pelo WhatsApp e vamos combinar os próximos
-        passos para sua visita técnica!
+        Tudo pronto! Envie seus dados pelo WhatsApp e vamos combinar sua viagem!
       </p>
       <Button className="bg-[#075e54] text-[#ece5dd] hover:bg-[#128c7e]">
         <Link href={whatsappLink} target="_blank" className="w-full h-full">
