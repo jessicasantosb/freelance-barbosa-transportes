@@ -7,7 +7,7 @@ export function HomeImage() {
         alt="ferramentas"
         src={"/images/truck.png"}
         fill
-        className="absolute object-cover rounded-full"
+        className="absolute object-cover"
       />
     </div>
   );
