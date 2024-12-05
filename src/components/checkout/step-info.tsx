@@ -154,7 +154,7 @@ export function StepInfo({ setStep }: SetStepProps) {
           >
             Voltar
           </Button>
-          <Button type="submit">Finalizar</Button>
+          <Button type="submit" className="bg-secondary">Finalizar</Button>
         </div>
       </form>
     </Form>
