@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "Sidinei Barbosa - Entregas e Fretes",
   description:
     "Serviços de entregas e fretes rápidos com caminhão pequeno. Ideal para mudanças e transporte de mercadorias com agilidade, cuidado e confiança. Solicite já um orçamento!",
+  icons: {
+    icon: "/images/favicon.svg",
+  },
 };
 
 export default function RootLayout({
