@@ -20,7 +20,14 @@ export function Footer() {
           </Link>
         </div>
         <p className="pt-4 text-muted-foreground">
-          &copy; Criado por Jessica Bandeira
+          &copy; Criado por{" "}
+          <Link
+            href={"https://jessicasantosb-linktree.vercel.app/"}
+            target="_blank"
+            className="hover:opacity-90"
+          >
+            Jessica Bandeira
+          </Link>
         </p>
       </footer>
     </>
