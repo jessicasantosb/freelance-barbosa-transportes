@@ -22,7 +22,7 @@ export function Footer() {
         <p className="pt-4 text-muted-foreground">
           &copy; Criado por{" "}
           <Link
-            href={"https://jessicasantosb-linktree.vercel.app/"}
+            href={`${process.env.NEXT_PUBLIC_PORTFOLIO_LINK}`}
             target="_blank"
             className="hover:opacity-90"
           >
