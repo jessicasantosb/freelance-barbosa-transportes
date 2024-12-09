@@ -1,3 +1,9 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { faqQuetions } from "@/data/faq-questions";
 import { ShieldQuestion } from "lucide-react";
 import Image from "next/image";
@@ -16,12 +22,21 @@ export default function Faq() {
         <div className="w-full">
           <div className="pt-8 md:pt-14 flex flex-col gap-4">
             {faqQuetions.map(({ question, answer }) => (
-              <div key={question}>
-                <h3 className="pb-2 text-xl md:text-3xl text-secondary">
-                  {question}
-                </h3>
-                <p className="text-md md:text-lg">{answer}</p>
-              </div>
+              <Accordion
+                key={question}
+                type="single"
+                collapsible
+                className="w-full"
+              >
+                <AccordionItem value={question}>
+                  <AccordionTrigger className="text-xl lg:text-2xl text-secondary">
+                    {question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-md lg:text-lg">
+                    {answer}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             ))}
           </div>
         </div>
