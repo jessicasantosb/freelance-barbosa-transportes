@@ -17,7 +17,7 @@ export const metadata = {
 export default function Faq() {
   return (
     <main className="container min-h-[70dvh] my-14 p-4">
-      <h1 className="text-xl md:text-6xl text-muted-foreground dark:text-muted flex items-center md:justify-center gap-1 uppercase tracking-tighter font-bold text-nowrap">
+      <h1 className="text-xl md:text-6xl text-secondary flex items-center md:justify-center gap-1 uppercase tracking-tighter font-bold text-nowrap">
         <span className="md:hidden">
           <ShieldQuestion />
         </span>
