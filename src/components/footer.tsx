@@ -7,7 +7,7 @@ export function Footer() {
     <>
       <Separator />
 
-      <footer className="pt-8 flex flex-col items-center justify-center">
+      <footer className="py-4 px-2 flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
           <p>Sidinei Barbosa - Entregas e Fretes</p>
           <Link
