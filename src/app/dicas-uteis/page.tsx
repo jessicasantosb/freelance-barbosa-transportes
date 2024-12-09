@@ -8,6 +8,12 @@ import { tips } from "@/data/tips";
 import { Lightbulb } from "lucide-react";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Dicas",
+  description:
+    "Precisa de um transporte ágil e seguro? Descubra dicas práticas para planejar mudanças, embalar mercadorias e otimizar suas entregas. Garantimos que você terá a melhor experiência ao utilizar nossos serviços!",
+};
+
 export default function DicasUteis() {
   return (
     <main className="container min-h-[70dvh] my-14 p-4">

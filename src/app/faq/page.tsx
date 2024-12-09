@@ -8,6 +8,12 @@ import { faqQuetions } from "@/data/faq-questions";
 import { ShieldQuestion } from "lucide-react";
 import Image from "next/image";
 
+export const metadata = {
+  title: "FAQ",
+  description:
+    "Tenha todas as suas dúvidas respondidas de forma clara e objetiva. Confira as perguntas mais frequentes sobre nossos serviços de entregas rápidas e fretes com caminhões pequenos. Aqui você encontra informações sobre prazos, áreas atendidas e muito mais!",
+};
+
 export default function Faq() {
   return (
     <main className="container min-h-[70dvh] my-14 p-4">
