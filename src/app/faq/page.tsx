@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Faq() {
   return (
-    <main className="min-h-[70dvh] my-14 p-4">
+    <main className="container min-h-[70dvh] my-14 p-4">
       <h1 className="text-xl md:text-6xl flex items-center md:justify-center gap-1 uppercase tracking-tighter font-bold text-nowrap">
         <span className="md:hidden">
           <ShieldQuestion />
@@ -26,7 +26,7 @@ export default function Faq() {
           </div>
         </div>
 
-        <div className="relative hidden md:block w-96 lg:w-[60%] h-96">
+        <div className="relative hidden md:flex flex-col text-right min-w-96 h-96">
           <Image
             alt="icon"
             src={"/images/faq.svg"}
