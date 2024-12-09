@@ -1,3 +1,4 @@
+import { Footer, Header } from "@/components";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Roboto_Condensed } from "next/font/google";
@@ -28,7 +29,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Header />
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
