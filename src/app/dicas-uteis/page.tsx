@@ -24,10 +24,10 @@ export default function DicasUteis() {
             {tips.map(({ tip, description }) => (
               <Accordion key={tip} type="single" collapsible className="w-full">
                 <AccordionItem value={tip}>
-                  <AccordionTrigger className="text-xl lg:text-2xl text-tertiary">
+                  <AccordionTrigger className="text-xl lg:text-2xl">
                     {tip}
                   </AccordionTrigger>
-                  <AccordionContent className="text-md lg:text-lg">
+                  <AccordionContent className="text-md lg:text-lg text-muted-foreground">
                     {description}
                   </AccordionContent>
                 </AccordionItem>

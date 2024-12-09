@@ -29,10 +29,10 @@ export default function Faq() {
                 className="w-full"
               >
                 <AccordionItem value={question}>
-                  <AccordionTrigger className="text-xl lg:text-2xl text-secondary">
+                  <AccordionTrigger className="text-xl lg:text-2xl">
                     {question}
                   </AccordionTrigger>
-                  <AccordionContent className="text-md lg:text-lg">
+                  <AccordionContent className="text-md lg:text-lg text-muted-foreground">
                     {answer}
                   </AccordionContent>
                 </AccordionItem>
