@@ -1,11 +1,15 @@
 import { Logo } from "@/components/logo";
-import { ModeToggle } from "@/components/mode-toggle";
+import { HeaderMenu } from "./header-menu";
+import { ModeToggle } from "./mode-toggle";
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between mb-8">
+    <header className="w-full h-16 p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
       <Logo />
-      <ModeToggle />
+      <div className="flex items-center gap-4">
+        <HeaderMenu />
+        <ModeToggle />
+      </div>
     </header>
   );
 }
