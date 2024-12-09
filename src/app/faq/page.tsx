@@ -18,7 +18,7 @@ export default function Faq() {
         Perguntas Frequentes
       </h1>
 
-      <div className="flex md:items-center justify-between gap-6">
+      <div className="flex md:items-start justify-between gap-6">
         <div className="w-full">
           <div className="pt-8 md:pt-14 flex flex-col gap-4">
             {faqQuetions.map(({ question, answer }) => (
@@ -41,7 +41,7 @@ export default function Faq() {
           </div>
         </div>
 
-        <div className="relative hidden md:flex flex-col text-right min-w-96 h-96">
+        <div className="relative hidden md:flex flex-col-reverse text-right min-w-96 h-96">
           <Image
             alt="icon"
             src={"/images/faq.svg"}
