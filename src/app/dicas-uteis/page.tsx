@@ -1,3 +1,9 @@
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import { tips } from "@/data/tips";
 import { Lightbulb } from "lucide-react";
 import Image from "next/image";
@@ -16,12 +22,16 @@ export default function DicasUteis() {
         <div className="w-full">
           <div className="pt-8 md:pt-14 flex flex-col gap-4">
             {tips.map(({ tip, description }) => (
-              <div key={tip}>
-                <h3 className="pb-2 text-xl md:text-3xl text-tertiary">
-                  {tip}
-                </h3>
-                <p className="text-md md:text-lg">{description}</p>
-              </div>
+              <Accordion key={tip} type="single" collapsible className="w-full">
+                <AccordionItem value={tip}>
+                  <AccordionTrigger className="text-xl lg:text-2xl text-tertiary">
+                    {tip}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-md lg:text-lg">
+                    {description}
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             ))}
           </div>
         </div>
