@@ -1,11 +1,10 @@
-import { FaqIcon } from "@/components/faq-icon";
 import { faqQuetions } from "@/data/faq-questions";
 import { ShieldQuestion } from "lucide-react";
 import Image from "next/image";
 
 export default function Faq() {
   return (
-    <main className="min-h-[70dvh] mt-20 mb-14 p-4">
+    <main className="min-h-[70dvh] my-14 p-4">
       <h1 className="text-xl md:text-6xl flex items-center md:justify-center gap-1 uppercase tracking-tighter font-bold text-nowrap">
         <span className="md:hidden">
           <ShieldQuestion />
@@ -34,6 +33,12 @@ export default function Faq() {
             fill
             className="absolute object-cover"
           />
+          <a
+            href="https://storyset.com/people"
+            className="text-xs text-muted-foreground"
+          >
+            People illustrations by Storyset
+          </a>
         </div>
       </div>
     </main>
