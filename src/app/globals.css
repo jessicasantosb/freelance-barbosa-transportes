@@ -91,13 +91,56 @@
   }
 }
 
-.animation-move-to-right {
+.animation-fadeIn > * {
   opacity: 0;
-  transform: translateX(100%);
-  animation: moveToRight 1s ease-out 1s forwards;
+  animation: fadeIn 400ms 800ms ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animation-loader {
+  animation: load 1s ease-out forwards;
+  transform-origin: right;
+}
+
+@keyframes load {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+.animation-move-to-Right {
+  animation: moveToRight 1s ease-out forwards;
 }
 
 @keyframes moveToRight {
+  from {
+    transform: translateX(-100vw);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animation-move-to-left {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: moveToLeft 1s ease-out 1s forwards;
+}
+
+@keyframes moveToLeft {
   to {
     opacity: 1;
     transform: translateX(0);

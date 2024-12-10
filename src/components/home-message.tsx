@@ -2,7 +2,7 @@ import { MessageTrigger } from "@/components";
 
 export function HomeMessage() {
   return (
-    <div className="flex-1">
+    <div className="flex-1 animation-fadeIn">
       <h1 className="pb-2 uppercase tracking-tighter text-5xl md:text-6xl font-bold ">
         Entregas e Fretes Rápidos com{" "}
         <span className="text-secondary">Qualidade e Confiança</span> em Belo
