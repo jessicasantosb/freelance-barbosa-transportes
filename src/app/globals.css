@@ -107,12 +107,12 @@
   }
 }
 
-.animation-loader {
-  animation: load 1s ease-out forwards;
+.animation-open-home {
+  animation: openHome 1s ease-out forwards;
   transform-origin: right;
 }
 
-@keyframes load {
+@keyframes openHome {
   from {
     transform: scaleX(1);
   }
@@ -121,11 +121,11 @@
   }
 }
 
-.animation-move-to-Right {
-  animation: moveToRight 1s ease-out forwards;
+.animation-move-truck {
+  animation: moveTruck 1s ease-out forwards;
 }
 
-@keyframes moveToRight {
+@keyframes moveTruck {
   from {
     transform: translateX(-100vw);
   }
@@ -134,13 +134,13 @@
   }
 }
 
-.animation-move-to-left {
+.animation-image-to-left {
   opacity: 0;
   transform: translateX(100%);
-  animation: moveToLeft 1s ease-out 1s forwards;
+  animation: imageToLeft 1s ease-out 1s forwards;
 }
 
-@keyframes moveToLeft {
+@keyframes imageToLeft {
   to {
     opacity: 1;
     transform: translateX(0);
