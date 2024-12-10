@@ -1,12 +1,8 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-import { tips } from "@/data/tips";
 import { Lightbulb } from "lucide-react";
-import Image from "next/image";
+
+import { AnimatedAccordion } from "@/components/accordion";
+import { ImageCard } from "@/components/image-card";
+import { tips } from "@/data/tips";
 
 export const metadata = {
   title: "Dicas",
@@ -25,37 +21,11 @@ export default function DicasUteis() {
       </h1>
 
       <div className="flex md:items-start justify-between gap-6">
-        <div className="w-full">
-          <div className="pt-8 md:pt-14 flex flex-col gap-4">
-            {tips.map(({ tip, description }) => (
-              <Accordion key={tip} type="single" collapsible className="w-full">
-                <AccordionItem value={tip}>
-                  <AccordionTrigger className="text-xl lg:text-2xl">
-                    {tip}
-                  </AccordionTrigger>
-                  <AccordionContent className="text-md lg:text-lg text-muted-foreground">
-                    {description}
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            ))}
-          </div>
+        <div className="w-full pt-8 md:pt-14 flex flex-col gap-4">
+          <AnimatedAccordion items={tips} />
         </div>
 
-        <div className="relative hidden md:flex flex-col-reverse text-right min-w-96 h-96">
-          <Image
-            alt="icon"
-            src={"/images/tips.svg"}
-            fill
-            className="absolute object-cover"
-          />
-          <a
-            href="https://storyset.com/people"
-            className="text-xs text-muted-foreground"
-          >
-            People illustrations by Storyset
-          </a>
-        </div>
+        <ImageCard imageName="tips.svg" />
       </div>
     </main>
   );
