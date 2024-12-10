@@ -19,7 +19,7 @@
     --secondary: 0, 74%, 42%;
     --secondary-foreground: 240 5.9% 10%;
 
-    --tertiary: 41,96%,40%;
+    --tertiary: 41, 96%, 40%;
     --tertiary-foreground: 240 5.9% 10%;
 
     --muted: 240 4.8% 95.9%;
@@ -88,5 +88,18 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+.animation-move-to-right {
+  opacity: 0;
+  transform: translateX(100%);
+  animation: moveToRight 1s ease-out 1s forwards;
+}
+
+@keyframes moveToRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
