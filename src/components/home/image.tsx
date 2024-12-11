@@ -1,14 +1,21 @@
+import * as motion from "motion/react-client";
 import Image from "next/image";
+import { homeImageVariants } from "../shared/animation-variants";
 
 export function HomeImage() {
   return (
-    <div className="hidden md:block relative w-64 h-64 lg:w-96 lg:h-96 animation-move-truck">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={homeImageVariants}
+      className="hidden md:block relative w-64 h-64 lg:w-96 lg:h-96"
+    >
       <Image
         alt="ferramentas"
         src={"/images/truck.png"}
         fill
         className="absolute object-cover"
       />
-    </div>
+    </motion.div>
   );
 }

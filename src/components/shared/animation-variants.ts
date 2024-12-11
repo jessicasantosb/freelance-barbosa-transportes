@@ -40,3 +40,13 @@ export const imageCardVariants: Variants = {
     transition: { duration: 1, delay: 0.5 },
   },
 };
+
+export const homeImageVariants: Variants = {
+  hidden: {
+    transform: "translateX(-100vw)",
+  },
+  visible: {
+    transform: "translateX(0)",
+    transition: { duration: 1, ease: "easeOut" },
+  },
+};
