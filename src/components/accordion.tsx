@@ -1,34 +1,10 @@
-"use client";
-
-import { motion, Variants } from "motion/react";
-
+import { accordionVariants, MotionDiv } from "./motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "./ui/accordion";
-
-const getAccordionVariants = (index: number) => {
-  const delay = (index + 1) / 5;
-
-  const accordionVariants: Variants = {
-    hidden: {
-      opacity: 0,
-      x: "-100%",
-    },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: {
-        delay,
-        duration: 0.9,
-      },
-    },
-  };
-
-  return accordionVariants;
-};
 
 type AnimatedAccordionProps = {
   items: {
@@ -41,10 +17,11 @@ export function AnimatedAccordion({ items }: AnimatedAccordionProps) {
   return (
     <>
       {items.map(({ item, content }, index) => (
-        <motion.div
+        <MotionDiv
           initial="hidden"
           animate="visible"
-          variants={getAccordionVariants(index)}
+          custom={index}
+          variants={accordionVariants}
           key={item}
         >
           <Accordion type="single" collapsible className="w-full">
@@ -57,7 +34,7 @@ export function AnimatedAccordion({ items }: AnimatedAccordionProps) {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-        </motion.div>
+        </MotionDiv>
       ))}
     </>
   );
