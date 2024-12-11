@@ -14,7 +14,7 @@ export const accordionVariants: Variants = {
     x: 0,
     transition: {
       delay: (custom + 1) / 5,
-      duration: 0.9,
+      duration: 0.7,
     },
   }),
 };
