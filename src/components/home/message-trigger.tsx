@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 
-import { CheckoutDialog } from "../checkout/dialog";
+import { ContactDialog } from "../contact-dialog/dialog";
 import { Button } from "../ui/button";
 
 export function MessageTrigger() {
-  const [checkoutOpen, setCheckoutOpen] = useState(false);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
   return (
     <section>
@@ -17,11 +17,11 @@ export function MessageTrigger() {
       </p>
       <Button
         className="h-14 uppercase text-xl bg-secondary"
-        onClick={() => setCheckoutOpen(true)}
+        onClick={() => setDialogOpen(true)}
       >
         Fale Comigo
       </Button>
-      <CheckoutDialog open={checkoutOpen} onOpenChange={setCheckoutOpen} />
+      <ContactDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </section>
   );
 }

@@ -1,8 +1,8 @@
 import { useState } from "react";
 
-import { StepInfo } from "@/components/checkout/step-info";
-import { StepFinish } from "@/components/checkout/step-finish";
-import { StepUser } from "@/components/checkout/step-user";
+import { StepFinish } from "@/components/contact-dialog/step-finish";
+import { StepInfo } from "@/components/contact-dialog/step-info";
+import { StepUser } from "@/components/contact-dialog/step-user";
 import {
   Dialog,
   DialogContent,
@@ -12,7 +12,7 @@ import {
 import { Progress } from "@/components/ui/progress";
 import { StepsProps } from "@/types/checkout-steps";
 
-type ChekoutProps = {
+type ContactFormProps = {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 };
@@ -23,7 +23,7 @@ type StepsElementsProps = {
   stepField: JSX.Element;
 };
 
-export function CheckoutDialog({ open, onOpenChange }: ChekoutProps) {
+export function ContactDialog({ open, onOpenChange }: ContactFormProps) {
   const [step, setStep] = useState<StepsProps>("user");
 
   const elements: Record<StepsProps, StepsElementsProps> = {
