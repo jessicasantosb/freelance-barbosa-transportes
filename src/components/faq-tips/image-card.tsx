@@ -1,8 +1,15 @@
+import * as motion from "motion/react-client";
 import Image from "next/image";
+import { imageCardVariants } from "../shared/animation-variants";
 
 export function ImageCard({ imageName }: { imageName: string }) {
   return (
-    <div className="relative hidden md:flex flex-col-reverse text-right min-w-96 h-96 animation-image-to-left">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      variants={imageCardVariants}
+      className="relative hidden md:flex flex-col-reverse text-right min-w-96 h-96"
+    >
       <Image
         alt="icon"
         src={`/images/${imageName}`}
@@ -15,6 +22,6 @@ export function ImageCard({ imageName }: { imageName: string }) {
       >
         People illustrations by Storyset
       </a>
-    </div>
+    </motion.div>
   );
 }
