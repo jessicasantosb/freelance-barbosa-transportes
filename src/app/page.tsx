@@ -1,4 +1,5 @@
-import { HomeImage, HomeMessage } from "@/components";
+import { HomeImage } from "@/components/home/image";
+import { HomeMessage } from "@/components/home/message";
 
 export default async function Home() {
   return (

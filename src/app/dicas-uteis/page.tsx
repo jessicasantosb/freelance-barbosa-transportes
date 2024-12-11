@@ -1,7 +1,7 @@
 import { Lightbulb } from "lucide-react";
 
-import { AnimatedAccordion } from "@/components/accordion";
-import { ImageCard } from "@/components/image-card";
+import { AnimatedAccordion } from "@/components/faq-tips/accordion";
+import { ImageCard } from "@/components/faq-tips/image-card";
 import { tips } from "@/data/tips";
 
 export const metadata = {

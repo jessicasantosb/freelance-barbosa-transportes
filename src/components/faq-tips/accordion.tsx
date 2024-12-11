@@ -1,10 +1,10 @@
-import { accordionVariants, MotionDiv } from "./motion";
+import { accordionVariants, MotionDiv } from "../shared/motion";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "./ui/accordion";
+} from "../ui/accordion";
 
 type AnimatedAccordionProps = {
   items: {

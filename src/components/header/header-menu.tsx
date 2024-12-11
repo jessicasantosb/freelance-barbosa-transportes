@@ -1,5 +1,8 @@
 "use client";
 
+import { Home, Lightbulb, ShieldQuestion } from "lucide-react";
+import Link from "next/link";
+
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -7,16 +10,12 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Home, Lightbulb, ShieldQuestion } from "lucide-react";
-import Link from "next/link";
 
 export function HeaderMenu() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline">
-          Menu
-        </Button>
+        <Button variant="outline">Menu</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
         <DropdownMenuItem>

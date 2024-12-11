@@ -1,7 +1,8 @@
-import { AnimatedAccordion } from "@/components/accordion";
-import { ImageCard } from "@/components/image-card";
-import { faqQuetions } from "@/data/faq-questions";
 import { ShieldQuestion } from "lucide-react";
+
+import { AnimatedAccordion } from "@/components/faq-tips/accordion";
+import { ImageCard } from "@/components/faq-tips/image-card";
+import { faqQuetions } from "@/data/faq-questions";
 
 export const metadata = {
   title: "FAQ",

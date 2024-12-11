@@ -1,4 +1,4 @@
-import { MessageTrigger } from "@/components";
+import { MessageTrigger } from "./message-trigger";
 
 export function HomeMessage() {
   return (

@@ -1,8 +1,10 @@
-import { Footer, Header } from "@/components";
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
 import { Roboto_Condensed } from "next/font/google";
 import "./globals.css";
+
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header/header";
 
 const outfit = Roboto_Condensed({ subsets: ["latin"] });
 
