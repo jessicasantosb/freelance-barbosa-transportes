@@ -1,4 +1,6 @@
-export const faqQuetions = [
+import { FaqAndTipsItem } from "@/types/faq-tips";
+
+export const faqQuetions: FaqAndTipsItem[] = [
   {
     item: "Que tipo de carga você transporta?",
     content:

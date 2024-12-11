@@ -1,4 +1,6 @@
-export const tips = [
+import { FaqAndTipsItem } from "@/types/faq-tips";
+
+export const tips: FaqAndTipsItem[] = [
   {
     item: "Planeje sua entrega com antecedência",
     content:
