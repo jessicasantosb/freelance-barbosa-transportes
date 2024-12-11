@@ -16,3 +16,15 @@ export const accordionVariants: Variants = {
     },
   }),
 };
+
+export const titleVariants: Variants = {
+  hidden: {
+    transform: "translateY(100%)",
+    opacity: 0,
+  },
+  visible: {
+    transform: "translateX(0)",
+    opacity: 1,
+    transition: { duration: 0.8, delay: 0.5 },
+  },
+};

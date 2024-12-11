@@ -1,5 +1,5 @@
+import * as motion from "motion/react-client";
 import { accordionVariants } from "../shared/animation-variants";
-import { MotionDiv } from "../shared/motion";
 import {
   Accordion,
   AccordionContent,
@@ -18,7 +18,7 @@ export function AnimatedAccordion({ items }: AnimatedAccordionProps) {
   return (
     <>
       {items.map(({ item, content }, index) => (
-        <MotionDiv
+        <motion.div
           initial="hidden"
           animate="visible"
           custom={index}
@@ -35,7 +35,7 @@ export function AnimatedAccordion({ items }: AnimatedAccordionProps) {
               </AccordionContent>
             </AccordionItem>
           </Accordion>
-        </MotionDiv>
+        </motion.div>
       ))}
     </>
   );
