@@ -1,4 +1,5 @@
-import { accordionVariants, MotionDiv } from "../shared/motion";
+import { accordionVariants } from "../shared/animation-variants";
+import { MotionDiv } from "../shared/motion";
 import {
   Accordion,
   AccordionContent,
