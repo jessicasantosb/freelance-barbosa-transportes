@@ -5,7 +5,7 @@ export function HomeMessage() {
     <div className="flex-1 animation-fadeIn">
       <h1 className="pb-2 uppercase tracking-tighter text-5xl md:text-6xl font-bold">
         Entregas e Fretes Rápidos com{" "}
-        <div className="animation-highlight-wrap inline-flex pr-1 overflow-hidden">
+        <div className="animation-highlight-wrap inline sm:inline-flex pr-1 overflow-hidden">
           <span className="text-secondary animation-highlight">
             Qualidade e Confiança
           </span>
