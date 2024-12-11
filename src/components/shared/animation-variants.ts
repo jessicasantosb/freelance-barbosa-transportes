@@ -1,6 +1,6 @@
 "use client";
 
-import { Variants } from "motion/react";
+import { Easing, Variants } from "motion/react";
 
 export const accordionVariants: Variants = {
   hidden: {
@@ -61,4 +61,40 @@ export const homeMessageVariants: Variants = {
     transform: "translateY(0)",
     transition: { duration: 0.4, delay: 0.8, ease: "easeIn" },
   },
+};
+
+export type FadeInVariantsType = {
+  duration?: number;
+  delay?: number;
+  ease?: Easing;
+};
+
+export const fadeInVariants: Variants = {
+  hidden: {
+    opacity: 0,
+    transform: "translateY(100%)",
+  },
+  visible: ({ duration, delay, ease }: FadeInVariantsType) => ({
+    opacity: 1,
+    transform: "translateY(0)",
+    transition: { duration, delay, ease },
+  }),
+};
+
+export type DoorVariantsType = {
+  duration?: number;
+  delay?: number;
+  ease?: Easing;
+  transformOrigin: number | string;
+};
+
+export const doorVariants: Variants = {
+  hidden: ({ transformOrigin }: DoorVariantsType) => ({
+    transform: "scaleX(1)",
+    transformOrigin,
+  }),
+  visible: ({ duration, delay, ease }: DoorVariantsType) => ({
+    transform: "scaleX(0)",
+    transition: { duration, delay, ease },
+  }),
 };

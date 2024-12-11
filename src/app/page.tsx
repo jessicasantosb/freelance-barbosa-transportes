@@ -1,10 +1,27 @@
+import * as motion from "motion/react-client";
+
 import { HomeImage } from "@/components/home/image";
 import { HomeMessage } from "@/components/home/message";
+import {
+  doorVariants,
+  DoorVariantsType,
+} from "@/components/shared/animation-variants";
 
 export default async function Home() {
+  const customDoor: DoorVariantsType = {
+    duration: 1,
+    transformOrigin: "right",
+    ease: "easeOut",
+  };
   return (
     <main className="container my-14 p-4 flex items-center gap-6">
-      <div className="absolute inset-0 w-full h-dvh z-40 bg-secondary animation-open-home" />
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={doorVariants}
+        custom={customDoor}
+        className="absolute inset-0 bg-secondary z-50"
+      />
       <HomeMessage />
       <HomeImage />
     </main>
