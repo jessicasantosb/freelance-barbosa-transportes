@@ -1,3 +1,5 @@
+import { ShieldQuestion } from "lucide-react";
+
 import { AnimatedAccordion } from "@/components/faq-tips/accordion";
 import { ImageCard } from "@/components/faq-tips/image-card";
 import { Title } from "@/components/faq-tips/title";
@@ -12,7 +14,7 @@ export const metadata = {
 export default function Faq() {
   return (
     <main className="container min-h-[70dvh] my-14 p-4">
-      <Title text="Perguntas Frequentes" />
+      <Title icon={<ShieldQuestion />} text="Perguntas Frequentes" />
       <div className="flex md:items-start justify-between gap-6">
         <div className="w-full pt-8 md:pt-14 flex flex-col gap-4">
           <AnimatedAccordion items={faqQuetions} />
