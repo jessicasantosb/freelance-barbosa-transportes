@@ -10,23 +10,28 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useState } from "react";
 
 export function HeaderMenu() {
+  const [open, setOpen] = useState(false);
+
+  const handleCloseMenu = () => setOpen(false);
+
   return (
-    <DropdownMenu>
+    <DropdownMenu open={open} onOpenChange={setOpen}>
       <DropdownMenuTrigger asChild>
         <Button variant="outline">Menu</Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent className="w-56">
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={handleCloseMenu}>
           <Home />
           <Link href={"/"}>Página inicial</Link>
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={handleCloseMenu}>
           <ShieldQuestion />
           <Link href={"/faq"}>Perguntas Frequentes</Link>
         </DropdownMenuItem>
-        <DropdownMenuItem>
+        <DropdownMenuItem onClick={handleCloseMenu}>
           <Lightbulb />
           <Link href={"/dicas-uteis"}>Dicas úteis</Link>
         </DropdownMenuItem>
