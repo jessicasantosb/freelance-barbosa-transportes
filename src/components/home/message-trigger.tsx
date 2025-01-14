@@ -21,13 +21,13 @@ export function MessageTrigger({ custom }: { custom: FadeInVariantsType }) {
           custom={custom}
           className="text-2xl pb-2"
         >
-          Precisa de entregas ou fretes{" "}
-          <span className="text-secondary">rápidos e seguros</span>? Solicite já
+          Precisa de um transporte{" "}
+          <span className="text-secondary">rápido e seguro</span>? Solicite já
           um orçamento!
         </motion.p>
       </div>
 
-      <div className="overflow-hidden">
+      <div className="overflow-hidden mt-6">
         <Button asChild>
           <motion.button
             variants={fadeInVariants}

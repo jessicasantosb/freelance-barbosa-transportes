@@ -9,7 +9,7 @@ export function Footer() {
 
       <footer className="py-4 px-2 flex flex-col items-center justify-center">
         <div className="flex flex-col items-center justify-center">
-          <p>Sidinei Barbosa - Entregas e Fretes</p>
+          <p>Sidinei Barbosa - Entregas e Fretes em geral</p>
           <Link
             href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER}`}
             target="_blank"

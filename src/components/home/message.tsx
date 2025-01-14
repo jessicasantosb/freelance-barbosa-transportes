@@ -59,7 +59,7 @@ export function HomeMessage() {
           custom={custom}
           className="pb-6 text-xl text-muted-foreground"
         >
-          Serviço de transporte ágil com um caminhão pequeno, ideal para
+          Serviço de transporte ágil com um caminhão HR, ideal para
           mudanças, entregas e fretes personalizados. Precisão e cuidado para
           atender suas necessidades!
         </motion.h3>
