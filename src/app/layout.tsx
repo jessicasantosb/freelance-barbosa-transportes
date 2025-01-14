@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Roboto_Condensed } from "next/font/google";
+import { Tomorrow } from "next/font/google";
 import "./globals.css";
 
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header/header";
 
-const outfit = Roboto_Condensed({ subsets: ["latin"] });
+const tomorrow = Tomorrow({ weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={outfit.className}>
+      <body className={tomorrow.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
