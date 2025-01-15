@@ -3,6 +3,7 @@
 import * as motion from "motion/react-client";
 import { useState } from "react";
 
+import Image from "next/image";
 import { ContactDialog } from "../contact-dialog/dialog";
 import {
   fadeInVariants,
@@ -16,15 +17,25 @@ export function MessageTrigger({ custom }: { custom: FadeInVariantsType }) {
   return (
     <section>
       <div className="overflow-hidden">
-        <motion.p
+        <motion.div
           variants={fadeInVariants}
           custom={custom}
-          className="text-lg sm:text-xl pb-2"
+          className="text-lg sm:text-xl pt-2 flex gap-2"
         >
-          Precisa de um transporte{" "}
-          <span className="text-secondary">rápido e seguro</span>? Solicite já
-          um orçamento!
-        </motion.p>
+          <div className="relative h-[2em] w-[5em] mt-4 sm:-mt-2">
+            <Image
+              alt="caminhão"
+              src={"/images/truck.svg"}
+              fill
+              className="absolute object-fill"
+            />
+          </div>
+          <p>
+            Precisa de um transporte{" "}
+            <span className="text-secondary">rápido e seguro</span>? Solicite já
+            um orçamento!
+          </p>
+        </motion.div>
       </div>
 
       <div className="overflow-hidden mt-6">

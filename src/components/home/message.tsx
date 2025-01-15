@@ -47,7 +47,7 @@ export function HomeMessage() {
             <motion.span
               variants={fadeInVariants}
               custom={customHighlight}
-              className="py-2 sm:py-4 whitespace-nowrap flex items-center gap-2 text-secondary text-3xl sm:text-6xl font-birthstone font-black tracking-normal"
+              className="whitespace-nowrap flex items-center gap-2 text-secondary text-3xl sm:text-6xl font-birthstone font-black tracking-normal"
             >
               <AnimatedMessage />
             </motion.span>
