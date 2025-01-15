@@ -66,6 +66,7 @@ const config = {
       },
       fontFamily: {
         archivoBlack: ["var(--font-archivo-black);"],
+        birthstone: ["var(--font-birthstone);"],
         tomorrow: ["var(--font-tomorrow);"],
       },
       borderRadius: {

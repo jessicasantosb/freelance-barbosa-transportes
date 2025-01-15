@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Archivo_Black, Tomorrow } from "next/font/google";
+import { Archivo_Black, Birthstone, Tomorrow } from "next/font/google";
 import "./globals.css";
 
 import { Footer } from "@/components/footer";
@@ -8,6 +8,11 @@ import { Header } from "@/components/header/header";
 
 const archivoBlack = Archivo_Black({
   variable: "--font-archivo-black",
+  weight: "400",
+  subsets: ["latin"],
+});
+const birthstone = Birthstone({
+  variable: "--font-birthstone",
   weight: "400",
   subsets: ["latin"],
 });
@@ -37,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="pt-br">
       <body
-        className={`${archivoBlack.variable} ${tomorrow.variable} antialiased`}
+        className={`${archivoBlack.variable} ${birthstone.variable} ${tomorrow.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"

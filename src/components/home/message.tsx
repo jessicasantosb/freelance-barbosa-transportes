@@ -5,6 +5,7 @@ import {
   fadeInVariants,
   FadeInVariantsType,
 } from "../shared/animation-variants";
+import { AnimatedMessage } from "./animated-message";
 import { MessageTrigger } from "./message-trigger";
 
 export function HomeMessage() {
@@ -31,9 +32,10 @@ export function HomeMessage() {
         <motion.h1
           variants={fadeInVariants}
           custom={custom}
-          className="pb-2 uppercase tracking-[-3px] leading-[44px] font-archivoBlack text-5xl md:text-6xl"
+          className="pb-2 uppercase leading-[35px] font-archivoBlack text-4xl sm:text-6xl"
         >
-          Entregas e Fretes Rápidos com{" "}
+          Entregas e Fretes Rápidos com
+          <br />
           <span className="relative inline-flex pr-1 overflow-hidden">
             <motion.div
               initial="hidden"
@@ -45,11 +47,12 @@ export function HomeMessage() {
             <motion.span
               variants={fadeInVariants}
               custom={customHighlight}
-              className="text-secondary"
+              className="py-2 sm:py-4 whitespace-nowrap flex items-center gap-2 text-secondary text-3xl sm:text-6xl font-birthstone font-black tracking-normal"
             >
-              Qualidade e Confiança
+              <AnimatedMessage />
             </motion.span>
           </span>{" "}
+          <br />
           em Belo Horizonte
         </motion.h1>
       </div>

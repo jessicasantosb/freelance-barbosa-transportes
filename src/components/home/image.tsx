@@ -8,7 +8,7 @@ export function HomeImage() {
       initial="hidden"
       animate="visible"
       variants={homeImageVariants}
-      className="hidden md:block relative w-64 h-64 lg:w-96 lg:h-96"
+      className="hidden lg:block relative w-64 h-64 lg:w-96 lg:h-96"
     >
       <Image
         alt="ferramentas"
