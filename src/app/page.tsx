@@ -14,7 +14,7 @@ export default async function Home() {
     ease: "easeOut",
   };
   return (
-    <main className="container my-14 p-4 flex items-center gap-6">
+    <main className="container sm:my-8 p-4 flex items-center gap-6">
       <motion.div
         initial="hidden"
         animate="visible"

@@ -19,7 +19,7 @@ export function MessageTrigger({ custom }: { custom: FadeInVariantsType }) {
         <motion.p
           variants={fadeInVariants}
           custom={custom}
-          className="text-2xl pb-2"
+          className="text-lg sm:text-xl pb-2"
         >
           Precisa de um transporte{" "}
           <span className="text-secondary">rápido e seguro</span>? Solicite já
@@ -32,7 +32,7 @@ export function MessageTrigger({ custom }: { custom: FadeInVariantsType }) {
           <motion.button
             variants={fadeInVariants}
             custom={custom}
-            className="h-14 uppercase text-xl bg-secondary"
+            className="py-6 uppercase text-lg sm:text-xl bg-[#082841] text-white"
             onClick={() => setDialogOpen(true)}
           >
             Fale Comigo

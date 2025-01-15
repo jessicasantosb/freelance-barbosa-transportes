@@ -1,22 +1,31 @@
 import type { Metadata } from "next";
 import { ThemeProvider } from "next-themes";
-import { Tomorrow } from "next/font/google";
+import { Archivo_Black, Tomorrow } from "next/font/google";
 import "./globals.css";
 
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header/header";
 
-const tomorrow = Tomorrow({ weight: "400", subsets: ["latin"] });
+const archivoBlack = Archivo_Black({
+  variable: "--font-archivo-black",
+  weight: "400",
+  subsets: ["latin"],
+});
+const tomorrow = Tomorrow({
+  variable: "--font-tomorrow",
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: {
-    default: "Barbosa Fretes",
-    template: "Barbosa Fretes | %s",
+    default: "Barbosa Transportes",
+    template: "Barbosa Transportes | %s",
   },
   description:
-    "Serviços de entregas e fretes rápidos com caminhão pequeno. Ideal para mudanças e transporte de mercadorias com agilidade, cuidado e confiança. Solicite já um orçamento!",
+    "Serviço de transporte ágil com um caminhão HR. Ideal para mudanças e transporte de mercadorias com agilidade, cuidado e confiança. Solicite já um orçamento!",
   icons: {
-    icon: "/images/logo.png",
+    icon: "/images/favicon.png",
   },
 };
 
@@ -27,7 +36,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={tomorrow.className}>
+      <body
+        className={`${archivoBlack.variable} ${tomorrow.variable} antialiased`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

@@ -31,7 +31,7 @@ export function HomeMessage() {
         <motion.h1
           variants={fadeInVariants}
           custom={custom}
-          className="pb-2 uppercase tracking-tighter text-5xl md:text-6xl font-bold"
+          className="pb-2 uppercase tracking-[-3px] leading-[44px] font-archivoBlack text-5xl md:text-6xl"
         >
           Entregas e Fretes Rápidos com{" "}
           <span className="relative inline-flex pr-1 overflow-hidden">
@@ -57,11 +57,11 @@ export function HomeMessage() {
         <motion.h3
           variants={fadeInVariants}
           custom={custom}
-          className="pb-6 text-xl text-muted-foreground"
+          className="pb-6 text-lg sm:text-xl text-muted-foreground"
         >
-          Serviço de transporte ágil com um caminhão HR, ideal para
-          mudanças, entregas e fretes personalizados. Precisão e cuidado para
-          atender suas necessidades!
+          Serviço de transporte ágil com um caminhão HR, ideal para mudanças,
+          entregas e fretes personalizados. Precisão e cuidado para atender suas
+          necessidades!
         </motion.h3>
       </div>
       <MessageTrigger custom={custom} />

@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function Faq() {
   return (
-    <main className="container min-h-[70dvh] my-14 p-4">
+    <main className="container min-h-[70dvh] my-8 p-4">
       <Title>
         <span className="md:hidden">{<ShieldQuestion />}</span>
         Perguntas Frequentes

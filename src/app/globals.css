@@ -44,7 +44,7 @@
   }
 
   .dark {
-    --background: 240 10% 3.9%;
+    --background:0, 0%, 26%;
     --foreground: 0 0% 98%;
 
     --card: 240 10% 3.9%;
@@ -56,7 +56,7 @@
     --primary: 0 0% 98%;
     --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 0, 74%, 58%;
+    --secondary: 0, 72%, 54%;
     --secondary-foreground: 0 0% 98%;
 
     --tertiary: 41, 96%, 60%;
@@ -87,6 +87,6 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-tomorrow;
   }
 }
