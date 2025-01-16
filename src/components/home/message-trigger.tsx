@@ -39,11 +39,10 @@ export function MessageTrigger({ custom }: { custom: FadeInVariantsType }) {
       </div>
 
       <div className="overflow-hidden mt-6">
-        <Button asChild>
+        <Button asChild variant={"cta"} size={"lg"}>
           <motion.button
             variants={fadeInVariants}
             custom={custom}
-            className="py-6 uppercase text-lg sm:text-xl bg-[#082841] text-white"
             onClick={() => setDialogOpen(true)}
           >
             Fale Comigo
