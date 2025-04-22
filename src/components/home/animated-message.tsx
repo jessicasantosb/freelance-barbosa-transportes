@@ -3,7 +3,7 @@ import Image from "next/image";
 export function AnimatedMessage() {
   return (
     <>
-      <span className="relative h-6 w-6 sm:h-12 sm:w-12 -mr-2">
+      <span className="relative size-6 sm:size-12 -mr-2">
         <Image
           alt="stamp"
           src={"/images/stamp.svg"}
@@ -11,8 +11,10 @@ export function AnimatedMessage() {
           className="absolute object-cover"
         />
       </span>
-      <span className="text-4xl tracking-tight">Qualidade e Confiança</span>
-      <span className="relative h-6 w-6 sm:h-12 sm:w-12">
+      <span className="text-4xl lg:text-7xl tracking-tight">
+        Qualidade e Confiança
+      </span>
+      <span className="relative size-6 sm:size-12">
         <Image
           alt="shield"
           src={"/images/shield.svg"}

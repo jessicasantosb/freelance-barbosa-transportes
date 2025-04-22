@@ -8,7 +8,7 @@ export function HomeImage() {
       initial="hidden"
       animate="visible"
       variants={homeImageVariants}
-      className="hidden lg:block relative w-64 h-64 lg:w-96 lg:h-96"
+      className="hidden xl:block relative size-[32rem] transition-opacity"
     >
       <Image
         alt="ferramentas"

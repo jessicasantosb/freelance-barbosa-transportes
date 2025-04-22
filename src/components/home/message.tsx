@@ -30,7 +30,7 @@ export function HomeMessage() {
     <motion.div
       initial="hidden"
       animate="visible"
-      className="flex-1 text-center"
+      className="flex-1 text-center xl:text-start"
     >
       <div className="overflow-hidden">
         <motion.h1
@@ -38,9 +38,14 @@ export function HomeMessage() {
           custom={custom}
           className="pb-2 uppercase leading-[35px] font-archivoBlack"
         >
-          <span className="text-2xl tracking-widest">Entregas e Fretes</span>
+          <span className="text-2xl lg:text-5xl tracking-widest">
+            Entregas e Fretes
+          </span>
           <br />
-          <span className="text-4xl tracking-widest"> Rápidos com </span>
+          <span className="text-4xl lg:text-7xl tracking-widest">
+            {" "}
+            Rápidos com{" "}
+          </span>
           <br />
           <span className="relative inline-flex pr-1 overflow-hidden">
             <motion.div
@@ -59,14 +64,17 @@ export function HomeMessage() {
             </motion.span>
           </span>
           <br />
-          <span className="text-2xl tracking-widest"> em Belo Horizonte</span>
+          <span className="text-2xl lg:text-5xl tracking-widest">
+            {" "}
+            em Belo Horizonte
+          </span>
         </motion.h1>
       </div>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden lg:w-[650px] mx-auto xl:mx-0">
         <motion.h3
           variants={fadeInVariants}
           custom={custom}
-          className="pb-6 text-lg sm:text-xl text-muted-foreground"
+          className="pb-6 text-lg sm:text-xl text-muted-foreground lg:text-justify"
         >
           Serviço de transporte ágil com um caminhão HR, ideal para mudanças,
           entregas e fretes personalizados. Precisão e cuidado para atender suas

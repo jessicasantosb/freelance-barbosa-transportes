@@ -16,13 +16,13 @@ export function MessageTrigger({ custom }: { custom: FadeInVariantsType }) {
 
   return (
     <section>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden lg:w-[650px] mx-auto xl:mx-0">
         <motion.div
           variants={fadeInVariants}
           custom={custom}
           className="text-lg sm:text-xl pt-2 flex gap-2"
         >
-          <div className="relative h-[2em] w-[5em] mt-4 sm:-mt-2">
+          <div className="relative h-[2em] w-[5em] mt-4 sm:-mt-2 xl:mt-1">
             <Image
               alt="caminhão"
               src={"/images/truck.svg"}
@@ -39,7 +39,12 @@ export function MessageTrigger({ custom }: { custom: FadeInVariantsType }) {
       </div>
 
       <div className="overflow-hidden mt-6">
-        <Button asChild variant={"cta"} size={"lg"} className="w-full sm:w-auto">
+        <Button
+          asChild
+          variant={"cta"}
+          size={"lg"}
+          className="w-full sm:w-auto"
+        >
           <motion.button
             variants={fadeInVariants}
             custom={custom}
