@@ -27,14 +27,20 @@ export function HomeMessage() {
   };
 
   return (
-    <motion.div initial="hidden" animate="visible" className="flex-1">
+    <motion.div
+      initial="hidden"
+      animate="visible"
+      className="flex-1 text-center"
+    >
       <div className="overflow-hidden">
         <motion.h1
           variants={fadeInVariants}
           custom={custom}
-          className="pb-2 uppercase leading-[35px] font-archivoBlack text-4xl sm:text-6xl"
+          className="pb-2 uppercase leading-[35px] font-archivoBlack"
         >
-          Entregas e Fretes Rápidos com
+          <span className="text-2xl tracking-widest">Entregas e Fretes</span>
+          <br />
+          <span className="text-4xl tracking-widest"> Rápidos com </span>
           <br />
           <span className="relative inline-flex pr-1 overflow-hidden">
             <motion.div
@@ -51,9 +57,9 @@ export function HomeMessage() {
             >
               <AnimatedMessage />
             </motion.span>
-          </span>{" "}
+          </span>
           <br />
-          em Belo Horizonte
+          <span className="text-2xl tracking-widest"> em Belo Horizonte</span>
         </motion.h1>
       </div>
       <div className="overflow-hidden">

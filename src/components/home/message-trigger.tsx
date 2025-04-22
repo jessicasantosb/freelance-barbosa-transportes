@@ -39,7 +39,7 @@ export function MessageTrigger({ custom }: { custom: FadeInVariantsType }) {
       </div>
 
       <div className="overflow-hidden mt-6">
-        <Button asChild variant={"cta"} size={"lg"}>
+        <Button asChild variant={"cta"} size={"lg"} className="w-full sm:w-auto">
           <motion.button
             variants={fadeInVariants}
             custom={custom}

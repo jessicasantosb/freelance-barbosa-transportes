@@ -11,7 +11,7 @@ export function AnimatedMessage() {
           className="absolute object-cover"
         />
       </span>
-      Qualidade e Confiança
+      <span className="text-4xl tracking-tight">Qualidade e Confiança</span>
       <span className="relative h-6 w-6 sm:h-12 sm:w-12">
         <Image
           alt="shield"
