@@ -54,12 +54,14 @@ function HeroBoard() {
             className="object-contain p-6 sm:p-8"
           />
         </div>
-        <div className="absolute inset-x-3 bottom-3 flex items-center justify-between gap-3">
-          <span className="mono-label text-muted-foreground">
-            Caixa 01 · Caminhão HR
+        <div className="absolute inset-x-3 bottom-3 flex items-end justify-between gap-2">
+          <span className="mono-label min-w-0 flex-1 text-muted-foreground text-[10px] leading-tight sm:text-xs">
+            <span className="block sm:inline">Caixa 01 · </span>
+            <span className="block sm:inline">Caminhão HR</span>
           </span>
+
           <span
-            className="barcode h-4 w-12 text-foreground/35"
+            className="barcode h-4 w-12 shrink-0 text-foreground/35"
             aria-hidden="true"
           />
         </div>
@@ -135,7 +137,9 @@ export function Hero() {
               >
                 Sua carga chega
                 <br />
-                <span className="text-primary marker-underline">como saiu.</span>
+                <span className="text-primary marker-underline">
+                  como saiu.
+                </span>
               </h1>
 
               <p
@@ -184,7 +188,11 @@ export function Hero() {
                 }
               >
                 <span className="flex size-4 shrink-0 items-center justify-center border border-ink/30 bg-paper/40">
-                  <Check className="size-2.5" strokeWidth={3} aria-hidden="true" />
+                  <Check
+                    className="size-2.5"
+                    strokeWidth={3}
+                    aria-hidden="true"
+                  />
                 </span>
                 <span className="mono-label text-[9px] text-ink/70 sm:text-[10px]">
                   {check}
