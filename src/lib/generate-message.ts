@@ -5,12 +5,13 @@ type GenerateMessageProps = States;
 export const generateMessage = ({ name, info }: GenerateMessageProps) => {
   const { district, city, category, urgency, description } = info;
 
-  return `*Dados do Cliente:*
+  return `*Dados do cliente:*
 
 *Nome:* ${name}
-*Endereço:* ${district}, ${city}
+*Origem:* ${district}
+*Destino:* ${city}
 *Categoria:* ${category}
 *Urgência:* ${urgency}
-${description && `*Descrição:* ${description}`}
+${description ? `*Descrição:* ${description}` : ""}
 `;
 };

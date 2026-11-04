@@ -1,29 +1,19 @@
-import * as motion from "motion/react-client";
+import { ClosingCta } from "@/components/home/closing-cta";
+import { CoverageRoute } from "@/components/home/coverage-route";
+import { DriverCard } from "@/components/home/driver-card";
+import { Hero } from "@/components/home/hero";
+import { HowItWorks } from "@/components/home/how-it-works";
+import { ServiceInventory } from "@/components/home/service-inventory";
 
-import { HomeImage } from "@/components/home/image";
-import { HomeMessage } from "@/components/home/message";
-import {
-  doorVariants,
-  DoorVariantsType,
-} from "@/components/shared/animation-variants";
-
-export default async function Home() {
-  const customDoor: DoorVariantsType = {
-    duration: 1,
-    transformOrigin: "right",
-    ease: "easeOut",
-  };
+export default function Home() {
   return (
-    <main className="max-w-[1400px] w-full mx-auto my-4 sm:my-8 p-4 lg:p-14 flex items-center">
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={doorVariants}
-        custom={customDoor}
-        className="absolute inset-0 bg-secondary z-50"
-      />
-      <HomeMessage />
-      <HomeImage />
+    <main>
+      <Hero />
+      <ServiceInventory />
+      <HowItWorks />
+      <DriverCard />
+      <CoverageRoute />
+      <ClosingCta />
     </main>
   );
 }

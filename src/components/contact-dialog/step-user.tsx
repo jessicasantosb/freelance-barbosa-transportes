@@ -1,4 +1,5 @@
 import { zodResolver } from "@hookform/resolvers/zod";
+import { ArrowRight } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -33,24 +34,30 @@ export function StepUser({ setStep }: SetStepProps) {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-7"
       >
         <FormField
           name="name"
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nome</FormLabel>
+              <FormLabel>Seu nome</FormLabel>
               <FormControl>
-                <Input autoFocus placeholder="Digite seu nome" {...field} />
+                <Input
+                  autoFocus
+                  placeholder="Como podemos te chamar?"
+                  autoComplete="name"
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <Button type="submit" variant={"outline"}>
+        <Button type="submit" size="lg" className="w-full justify-between">
           Próximo
+          <ArrowRight className="size-4" aria-hidden="true" />
         </Button>
       </form>
     </Form>

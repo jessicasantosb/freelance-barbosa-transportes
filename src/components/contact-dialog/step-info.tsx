@@ -1,3 +1,5 @@
+import { zodResolver } from "@hookform/resolvers/zod";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -11,18 +13,17 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { stepInfoSchema } from "@/schemas/step-info";
-import { useInfoStore } from "@/stores/info-store";
-import { SetStepProps } from "@/types/checkout-steps";
-import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
-import { Textarea } from "../ui/textarea";
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { stepInfoSchema } from "@/schemas/step-info";
+import { useInfoStore } from "@/stores/info-store";
+import { SetStepProps } from "@/types/checkout-steps";
 
 export function StepInfo({ setStep }: SetStepProps) {
   const { info, setInfo } = useInfoStore((state) => state);
@@ -39,16 +40,21 @@ export function StepInfo({ setStep }: SetStepProps) {
 
   return (
     <Form {...form}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
-        <div className="mb-4 grid grid-cols-2 gap-2">
+      <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-6">
+        <div className="grid gap-6 sm:grid-cols-2 sm:gap-5">
           <FormField
             name="district"
             control={form.control}
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Bairro/Cidade de origem</FormLabel>
+                <FormLabel>Origem</FormLabel>
                 <FormControl>
-                  <Input autoFocus {...field} />
+                  <Input
+                    autoFocus
+                    placeholder="Bairro ou cidade"
+                    autoComplete="address-level3"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -60,9 +66,13 @@ export function StepInfo({ setStep }: SetStepProps) {
             control={form.control}
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Bairro/Cidade de destino</FormLabel>
+                <FormLabel>Destino</FormLabel>
                 <FormControl>
-                  <Input {...field} />
+                  <Input
+                    placeholder="Bairro ou cidade"
+                    autoComplete="address-level3"
+                    {...field}
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -81,7 +91,7 @@ export function StepInfo({ setStep }: SetStepProps) {
                     onValueChange={field.onChange}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="selecione o tipo" />
+                      <SelectValue placeholder="Selecione o tipo" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="Mudança residencial">
@@ -94,7 +104,7 @@ export function StepInfo({ setStep }: SetStepProps) {
                         Entrega de mercadorias
                       </SelectItem>
                       <SelectItem value="Coleta e entrega de documentos ou itens pequenos">
-                        Coleta e entrega de documentos ou itens pequenos
+                        Documentos ou itens pequenos
                       </SelectItem>
                       <SelectItem value="Outros">Outros</SelectItem>
                     </SelectContent>
@@ -117,12 +127,12 @@ export function StepInfo({ setStep }: SetStepProps) {
                     onValueChange={field.onChange}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="selecione a urgência" />
+                      <SelectValue placeholder="Selecione a urgência" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="Emergência">Emergência</SelectItem>
                       <SelectItem value="Agendamento para data específica">
-                        Agendamento para data específica
+                        Agendar para uma data
                       </SelectItem>
                     </SelectContent>
                   </Select>
@@ -132,29 +142,38 @@ export function StepInfo({ setStep }: SetStepProps) {
             )}
           />
         </div>
+
         <FormField
           name="description"
           control={form.control}
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Descrição da Carga | Condições Especiais</FormLabel>
+              <FormLabel>Descrição da carga (opcional)</FormLabel>
               <FormControl>
-                <Textarea {...field} />
+                <Textarea
+                  placeholder="Ex.: sofá de 3 lugares, 12 caixas, precisa de ajuda para carregar."
+                  {...field}
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
 
-        <div className="mt-4 flex justify-between gap-2">
+        <div className="flex flex-col-reverse gap-3 border-t border-dashed border-border pt-5 sm:flex-row sm:items-center sm:justify-between">
           <Button
             type="button"
-            variant={"link"}
+            variant="ghost"
             onClick={() => setStep("user")}
+            className="justify-start gap-2"
           >
+            <ArrowLeft className="size-4" aria-hidden="true" />
             Voltar
           </Button>
-          <Button type="submit" className="bg-secondary">Finalizar</Button>
+          <Button type="submit" className="justify-between gap-3 sm:min-w-40">
+            Revisar e enviar
+            <ArrowRight className="size-4" aria-hidden="true" />
+          </Button>
         </div>
       </form>
     </Form>

@@ -1,9 +1,9 @@
 import { z } from "zod";
 
 export const stepInfoSchema = z.object({
-  district: z.string().min(1, "O origem é obrigatória"),
-  city: z.string().min(1, "O destino é obrigatório"),
-  category: z.string().min(1, "A categoria é obrigatória"),
-  urgency: z.string().min(1, "A urgência é obrigatória"),
+  district: z.string().min(1, "Informe a origem"),
+  city: z.string().min(1, "Informe o destino"),
+  category: z.string().min(1, "Selecione a categoria"),
+  urgency: z.string().min(1, "Selecione a urgência"),
   description: z.string().optional(),
 });
